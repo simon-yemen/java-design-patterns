@@ -30,6 +30,7 @@ package com.iluwatar.builder;
 
 public record Hero(Profession profession, String name, HairType hairType, HairColor hairColor, Armor armor, Weapon weapon) {
 
+  // 这里的构造函数是私有的
   private Hero(Builder builder) {
     this(builder.profession, builder.name, builder.hairType, builder.hairColor, builder.armor, builder.weapon);
   }
