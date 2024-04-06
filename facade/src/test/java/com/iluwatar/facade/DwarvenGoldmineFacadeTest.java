@@ -109,6 +109,10 @@ class DwarvenGoldmineFacadeTest {
     assertEquals(15, appender.getLogSize());
   }
 
+
+  /**
+   * 定义一个基于内存的appender，不是输出到某个介质中，而是放在log这个容器里
+   */
   private static class InMemoryAppender extends AppenderBase<ILoggingEvent> {
 
     private final List<ILoggingEvent> log = new LinkedList<>();

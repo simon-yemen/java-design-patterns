@@ -12,6 +12,7 @@ tag:
 Provide a unified interface to a set of interfaces in a subsystem. Facade defines a higher-level 
 interface that makes the subsystem easier to use.
 
+为子系统中的一组接口提供统一的接口。Facade定义了一个更高级的接口，使子系统更容易使用。
 ## Explanation
 
 Real-world example
@@ -21,9 +22,13 @@ Real-world example
 > it has to do a lot of stuff to make it happen. This simple interface to the complex subsystem is a 
 > facade.
 
+> 金矿是如何运作的?你会说:“矿工去那里挖金子!”这就是你所相信的，因为你使用的是一个简单的界面，这是goldmine在外部提供的，在内部它必须做很多事情来实现它。这个到复杂子系统的简单接口是一个门面。
+
 In plain words
 
 > Facade pattern provides a simplified interface to a complex subsystem.
+
+> 外观模式为复杂的子系统提供了一个简化的接口。
 
 Wikipedia says
 
