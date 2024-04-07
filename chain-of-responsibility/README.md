@@ -16,12 +16,14 @@ tag:
 ## Intent
 
 Avoid coupling the sender of a request to its receiver by giving more than one object a chance to handle the request. Chain the receiving objects and pass the request along the chain until an object handles it.
+通过给多个对象处理请求的机会，避免请求的发送方和接收方耦合。将接收对象链接起来，并沿着链传递请求，直到有对象处理它。
 
 ## Explanation
 
 Real-world example
 
 > The Orc King gives loud orders to his army. The closest one to react is the commander, then an officer, and then a soldier. The commander, officer, and soldier form a chain of responsibility.
+> 兽人国王大声命令他的军队。最接近反应的是指挥官，然后是军官，然后是士兵。指挥官、军官和士兵组成了一个责任链。
 
 In plain words
 
@@ -30,6 +32,8 @@ In plain words
 Wikipedia says
 
 > In object-oriented design, the chain-of-responsibility pattern is a design pattern consisting of a source of command objects and a series of processing objects. Each processing object contains logic that defines the types of command objects that it can handle; the rest are passed to the next processing object in the chain.
+> 在面向对象的设计中，责任链模式是一种由一个命令对象源和一系列处理对象组成的设计模式。每个处理对象包含定义它可以处理的命令对象类型的逻辑;其余的传递给链中的下一个处理对象。
+
 
 **Programmatic Example**
 

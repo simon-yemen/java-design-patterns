@@ -65,6 +65,10 @@ public class SimpleThreatAwareSystem implements ThreatAwareSystem {
    */
   @Override
   public Filterer<? extends ThreatAwareSystem, ? extends Threat> filtered() {
+    /*
+      方法filtered()返回的是一个Filterer类型的对象，但它是通过方法引用来实现的，即this::filteredGroup。
+      虽然filteredGroup方法直接返回的是ThreatAwareSystem类型，但实际上它可以被视作一个适配到Filterer接口的lambda表达式。
+     */
     return this::filteredGroup;
   }
 

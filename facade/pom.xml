@@ -33,7 +33,10 @@
     <version>1.26.0-SNAPSHOT</version>
   </parent>
   <artifactId>facade</artifactId>
+
+    <!--JUnit Jupiter Engine 是 JUnit 5（即 JUnit 5 核心的一部分）中负责执行测试的组件-->
   <dependencies>
+      <!-- 这里使用的是父项目中的springboot中的junit5 -->
     <dependency>
       <groupId>org.junit.jupiter</groupId>
       <artifactId>junit-jupiter-engine</artifactId>

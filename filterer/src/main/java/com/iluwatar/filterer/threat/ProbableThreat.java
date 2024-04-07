@@ -30,6 +30,7 @@ package com.iluwatar.filterer.threat;
 public interface ProbableThreat extends Threat {
   /**
    * Returns probability of occurrence of given threat.
+   * 返回给定威胁发生的概率。
    * @return probability of occurrence of given threat.
    */
   double probability();

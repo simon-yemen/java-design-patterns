@@ -33,5 +33,10 @@ import java.util.function.Predicate;
  */
 @FunctionalInterface
 public interface Filterer<G, E> {
+  /**
+   * 这样设计的原因是遵循PECS原则（Producer Extends, Consumer Super），
+   * 即对于生产者方法（返回集合的元素）应使用`extends` 关键字，而对于消费者方法（消费集合的元素）应使用 `super`，详细
+   * 见README.MD
+   */
   G by(Predicate<? super E> predicate);
 }

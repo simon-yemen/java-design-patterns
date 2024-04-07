@@ -22,13 +22,26 @@
  * OUT OF OR IN CONNECTION WITH THE SOFTWARE OR THE USE OR OTHER DEALINGS IN
  * THE SOFTWARE.
  */
+
 package com.iluwatar.filterer.threat;
 
 /**
  * Enum class representing Threat types.
  */
 public enum ThreatType {
+
+  /**
+   * 特洛伊
+   */
   TROJAN,
+
+  /**
+   * 蠕虫
+   */
   WORM,
+
+  /**
+   * 黑客程序
+   */
   ROOTKIT
 }
