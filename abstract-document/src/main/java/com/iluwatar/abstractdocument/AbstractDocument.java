@@ -54,6 +54,11 @@ public abstract class AbstractDocument implements Document {
     return documentProperties.get(key);
   }
 
+
+ /*
+     根据提供的函数构造器childConstructor，从指定键对应的值中提取并转换为子元素流。
+   * 这里的假设是，指定键的值应为一个包含多个子对象映射表的列表
+  */
   @Override
   public <T> Stream<T> children(String key, Function<Map<String, Object>, T> childConstructor) {
     return Stream.ofNullable(get(key))

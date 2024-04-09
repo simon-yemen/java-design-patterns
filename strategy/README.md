@@ -14,6 +14,7 @@ Policy
 
 Define a family of algorithms, encapsulate each one, and make them interchangeable. Strategy lets 
 the algorithm vary independently of the clients that use it.
+定义一系列算法，封装每个算法，并使它们可以互换。策略让算法独立于使用它的客户端而变化。
 
 ## Explanation
 
@@ -21,6 +22,7 @@ Real-world example
 
 > Slaying dragons is a dangerous job. With experience, it becomes easier. Veteran 
 > dragonslayers have developed different fighting strategies against different types of dragons.         
+> 屠龙是一项危险的工作。有了经验，就会变得更容易。经验丰富的屠龙者针对不同类型的龙制定了不同的战斗策略。
 
 In plain words
 
@@ -30,6 +32,7 @@ Wikipedia says
 
 > In computer programming, the strategy pattern (also known as the policy pattern) is a behavioral 
 > software design pattern that enables selecting an algorithm at runtime.
+> 在计算机编程中，策略模式(也称为策略模式)是一种行为软件设计模式，允许在运行时选择算法。
 
 **Programmatic Example**
 
@@ -72,6 +75,7 @@ public class SpellStrategy implements DragonSlayingStrategy {
 
 And here is the mighty dragonslayer, who can pick his fighting strategy based on the 
 opponent.
+这是强大的屠龙者，他可以根据对手选择自己的战斗策略。
 
 ```java
 public class DragonSlayer {
@@ -118,6 +122,7 @@ Program output:
 ```
 
 What's more, the lambda expressions in Java 8 provides another approach for the implementation:
+此外，Java 8中的lambda表达式还提供了另一种实现方式:
 
 ```java
 public class LambdaStrategy {
@@ -171,9 +176,13 @@ The program output is the same as the above one.
 Use the Strategy pattern when
 
 * Many related classes differ only in their behavior. Strategies provide a way to configure a class either one of many behaviors
+许多相关的类只在行为上有所不同。策略提供了一种从多种行为中配置类的方法
 * You need different variants of an algorithm. for example, you might define algorithms reflecting different space/time trade-offs. Strategies can be used when these variants are implemented as a class hierarchy of algorithms
+  你需要一个算法的不同变体。例如，您可以定义反映不同空间/时间权衡的算法。当这些变体被实现为算法的类层次结构时，可以使用策略
 * An algorithm uses data that clients shouldn't know about. Use the Strategy pattern to avoid exposing complex algorithm-specific data structures
+  算法使用了客户端不应该知道的数据。使用策略模式可以避免暴露复杂的特定于算法的数据结构
 * A class defines many behaviors, and these appear as multiple conditional statements in its operations. Instead of many conditionals, move the related conditional branches into their own Strategy class
+  类定义了很多行为，这些行为在操作中表现为多个条件语句。将相关的条件分支移到它们自己的策略类中，而不是使用很多条件分支
 
 ## Tutorial 
 
