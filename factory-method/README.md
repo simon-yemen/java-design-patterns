@@ -15,6 +15,7 @@ Virtual Constructor
 
 Define an interface for creating an object, but let subclasses decide which class to instantiate. 
 Factory Method lets a class defer instantiation to subclasses.
+定义一个用于创建对象的接口，但让子类决定实例化哪个类。工厂方法让类延迟实例化到子类。
 
 ## Explanation
 
@@ -22,10 +23,11 @@ Real-world example
 
 > Blacksmith manufactures weapons. Elves require Elvish weapons and orcs require Orcish weapons. 
 > Depending on the customer at hand the right type of blacksmith is summoned.
+> 铁匠制造武器。精灵需要精灵武器，兽人需要兽人武器。根据客户的不同，需要召集合适的铁匠。
 
 In plain words
 
-> It provides a way to delegate the instantiation logic to child classes.
+> It provides a way to delegate the instantiation logic to child classes.它提供了一种将实例化逻辑委托给子类的方法。
 
 Wikipedia says
 
@@ -38,7 +40,7 @@ Wikipedia says
  **Programmatic Example**
 
 Taking our blacksmith example above. First of all, we have a `Blacksmith` interface and some 
-implementations for it:
+implementations for it:以上面的铁匠为例。首先，我们有一个Blacksmith接口和一些实现:
 
 ```java
 public interface Blacksmith {
@@ -59,7 +61,7 @@ public class OrcBlacksmith implements Blacksmith {
 ```
 
 When the customers come, the correct type of blacksmith is summoned and requested weapons are 
-manufactured:
+manufactured:当客户来的时候，正确类型的铁匠会被召集并被要求制造武器:
 
 ```java
 Blacksmith blacksmith = new OrcBlacksmith();

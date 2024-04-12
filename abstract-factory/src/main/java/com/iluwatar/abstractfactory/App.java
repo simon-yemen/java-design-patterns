@@ -72,7 +72,7 @@ public class App implements Runnable {
     LOGGER.info(kingdom.getKing().getDescription());
   }
 
-  /**
+   /**
    * Creates kingdom.
    * @param kingdomType type of Kingdom
    */

@@ -15,6 +15,7 @@ tag:
 
 Providing a static method encapsulated in a class called the factory, to hide the implementation 
 logic and make client code focus on usage rather than initializing new objects.
+提供一个封装在名为工厂的类中的静态方法，以隐藏实现逻辑，并使客户端代码专注于使用，而不是初始化新对象。
 
 ## Explanation
 
@@ -24,11 +25,15 @@ Real-world example
 > gold and copper coins and switching between them must be possible without modifying the existing 
 > source code. The factory pattern makes it possible by providing a static construction method which 
 > can be called with relevant parameters.
+> 想象一下，一个炼金术士将要制造硬币。炼金术士必须能够创造黄金和铜币之间的切换必须是可能的，而不修改现有的源代码。工厂模式通过提供一个可以使用相关参数调用的静态构造方法来实现这一点。
+
 
 Wikipedia says
 
 > Factory is an object for creating other objects – formally a factory is a function or method that 
 > returns objects of a varying prototype or class.
+> 工厂是用于创建其他对象的对象——形式上，工厂是一个函数或方法，它返回不同原型或类的对象。
+
 
 **Programmatic Example**
 
@@ -112,11 +117,13 @@ This is a gold coin.
 
 Use the factory pattern when you only care about the creation of an object, not how to create 
 and manage it.
+当你只关心对象的创建，而不关心如何创建和管理它时，可以使用工厂模式。
+
 
 Pros
 
-* Allows keeping all objects creation in one place and avoid of spreading 'new' keyword across codebase.
-* Allows to write loosely coupled code. Some of its main advantages include better testability, easy-to-understand code, swappable components, scalability and isolated features.
+* Allows keeping all objects creation in one place and avoid of spreading 'new' keyword across codebase.允许将所有对象创建在一个地方，并避免在代码库中传播` new `关键字。
+* Allows to write loosely coupled code. Some of its main advantages include better testability, easy-to-understand code, swappable components, scalability and isolated features.允许编写松散耦合的代码。它的一些主要优点包括更好的可测试性，易于理解的代码，可切换的组件，可扩展性和隔离特性。
 
 Cons
 

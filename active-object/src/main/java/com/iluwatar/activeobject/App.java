@@ -22,6 +22,7 @@
  * OUT OF OR IN CONNECTION WITH THE SOFTWARE OR THE USE OR OTHER DEALINGS IN
  * THE SOFTWARE.
  */
+
 package com.iluwatar.activeobject;
 
 import java.util.ArrayList;
@@ -30,17 +31,20 @@ import org.slf4j.Logger;
 import org.slf4j.LoggerFactory;
 
 /**
- * The Active Object pattern helps to solve synchronization difficulties without using 
- * 'synchronized' methods. The active object will contain a thread-safe data structure 
+ * The Active Object pattern helps to solve synchronization difficulties without using
+ * 'synchronized' methods. The active object will contain a thread-safe data structure
  * (such as BlockingQueue) and use to synchronize method calls by moving the logic of the method
  * into an invocator(usually a Runnable) and store it in the DSA.
- * 
+ * <p>
+ * 活动对象模式有助于在不使用` synchronized `方法的情况下解决同步问题。活动对象将包含一个线程安全的数据结构(例如BlockingQueue)，
+ * 并通过将方法逻辑移动到调用器(通常是一个Runnable)并将其存储在DSA中来同步方法调用。
+ *
  * <p>In this example, we fire 20 threads to modify a value in the target class.
  */
 public class App implements Runnable {
-  
+
   private static final Logger logger = LoggerFactory.getLogger(App.class.getName());
-  
+
   private static final int NUM_CREATURES = 3;
 
   /**
@@ -48,11 +52,11 @@ public class App implements Runnable {
    *
    * @param args command line arguments.
    */
-  public static void main(String[] args) {  
+  public static void main(String[] args) {
     var app = new App();
     app.run();
   }
-  
+
   @Override
   public void run() {
     List<ActiveCreature> creatures = new ArrayList<>();
